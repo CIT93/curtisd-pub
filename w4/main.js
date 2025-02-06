@@ -57,7 +57,7 @@ for (arr of CFPDATA ) {
     console.log(arr)
     const output = document.getElementById("output");
     const newP = document.createElement("p");
-    newP.textContent = `Cardon Footprint total is: ${arr[4]} and the size is ${arr[1]}  `
+    newP.textContent = `Members: ${arr[0]},  house size is: ${arr[1]}, house hold: ${arr[2]}, house holdsizepoints: ${arr[3]}, and the total is: ${arr[4]}  `
     output.appendChild(newP)
 }
 }
