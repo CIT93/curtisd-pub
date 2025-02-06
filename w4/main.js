@@ -52,7 +52,18 @@ function start(houseHoldMembers, houseSize) {
 
   CFPDATA.push([houseHoldMembers, houseSize, houseHoldPTS, DHSP, total]);
 }
+function displayOutput() {
+for (arr of CFPDATA ) {
+    console.log(arr)
+    const output = document.getElementById("output");
+    const newP = document.createElement("p");
+    newP.textContent = `Cardon Footprint total is: ${arr[4]} and the size is ${arr[1]}  `
+    output.appendChild(newP)
+}
+}
 
 start(5, "apt");
 start(4, "large");
 start(2, "medium");
+
+displayOutput()
