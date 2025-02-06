@@ -21,3 +21,4 @@ carbon.textContent = total
 
 
 
+console.log(typeof myVar)
