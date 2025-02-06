@@ -1,67 +1,58 @@
+const CFPDATA = [];
 
-// Consider the size of your home. A smaller home makes a smaller impact on the environment. Take the size of your home into account as you calculate your impact.[2]
-// If you have a large house, then add 10 points to your score.
-// If you have a medium-sized house, then add 7 points.
-// If you have a small house, then add 4 points.
-// If you live in an apartment, then add 2 points.
+function determinHouseSizePts(size) {
+  let carbonFootprintPoints = 0;
+  if (size === "large") {
+    console.log("I am Large");
+    carbonFootprintPoints = 10;
+  } else if (size === "medium") {
+    console.log("I am Medium");
+    carbonFootprintPoints = 7;
+  } else if (size === "small") {
+    console.log("I am small");
+    carbonFootprintPoints = 4;
+  } else if (size === "apt") {
+    console.log("I am apt");
+    carbonFootprintPoints = 2;
+  } else {
+    console.log("No points added");
+  }
 
-
-function determineHomeSizePts(homeSize) {
-    console.log("Inside the function for home size");
-
-    if (homeSize === "large") {
-        carbonFootprintPoints += 10;
-    } else if (homeSize === "medium") {
-        carbonFootprintPoints += 7;
-    } else if (homeSize === "small") {
-        carbonFootprintPoints += 4;
-    } else if (homeSize === "apartment") {
-        carbonFootprintPoints += 2;
-    } else {
-        console.log("Invalid home size input. No points added.");
-    }
-
-    console.log(`Based on a ${homeSize} home, the points would be ${carbonFootprintPoints}.`);
+  return carbonFootprintPoints;
 }
 
-let carbonFootprintPoints = 0;
+function determinHouseHoldPts(numberInHousehold) {
+  let householdPoints = 0;
+  if (numberInHousehold === 1) {
+    householdPoints = 14;
+  } else if (numberInHousehold === 2) {
+    householdPoints = 12;
+  } else if (numberInHousehold === 3) {
+    householdPoints = 10;
+  } else if (numberInHousehold === 4) {
+    householdPoints = 8;
+  } else if (numberInHousehold === 5) {
+    householdPoints = 6;
+  } else if (numberInHousehold === 6) {
+    householdPoints = 4;
+  } else if (numberInHousehold < 6) {
+    householdPoints = 2;
+  } else {
+    console.log("no update to points");
+  }
 
-// Example usage:
-determineHomeSizePts("large");
-determineHomeSizePts("small");
+  return householdPoints;
+}
+console.log("global scope");
 
+function start(houseHoldMembers, houseSize) {
+  const houseHoldPTS = determinHouseHoldPts(houseHoldMembers);
+  const DHSP = determinHouseSizePts(houseSize);
+  const total = houseHoldPTS + DHSP;
 
+  CFPDATA.push([houseHoldMembers, houseSize, houseHoldPTS, DHSP, total]);
+}
 
-
-
-// function determinHouseHoldPts(numberInHousehold) {
-//     console.log("Inside the function")
-//     if (numberInHousehold === 1) {
-//       carbonFootprintPoints = carbonFootprintPoints + 14;
-//     } else if (numberInHousehold === 2) {
-//       carbonFootprintPoints = carbonFootprintPoints + 12;
-//     } else if (numberInHousehold === 3) {
-//       carbonFootprintPoints = carbonFootprintPoints + 10;
-//     } else if (numberInHousehold === 4) {
-//       carbonFootprintPoints = carbonFootprintPoints + 8;
-//     } else if (numberInHousehold === 5) {
-//       carbonFootprintPoints = carbonFootprintPoints + 6;
-//     } else if (numberInHousehold === 6) {
-//       carbonFootprintPoints = carbonFootprintPoints + 4;
-//     } else if (numberInHousehold < 6) {
-//       carbonFootprintPoints = carbonFootprintPoints + 2;
-//     } else {
-//       console.log("no update to points");
-//     }
-    
-//     console.log(`Based on the number of member fo the household of ${numberInHousehold} the points would be ${carbonFootprintPoints}.`) 
-// }
-
-
-
-// let carbonFootprintPoints = 0;
-// // const numberInHousehold  = 3;
-
-// //global scope
-// determinHouseHoldPts(3)
-// determinHouseHoldPts(4)
+start(5, "apt");
+start(4, "large");
+start(2, "medium");
