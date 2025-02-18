@@ -1,32 +1,33 @@
 const movies = [
   {
     title: "Friday",
-    year:"1995",
-    rating: 9.5
+    year: "1995",
+    rating: 9.5,
   },
   {
     title: "Next Friday",
-    year:"2000",
-    rating: 8.5
+    year: "2000",
+    rating: 8.5,
   },
   {
     title: "Friday After Next",
-    year:"2002",
-    rating: 7.5
+    year: "2002",
+    rating: 7.5,
   },
-  
-  ]
-function movie() {
-  for (let i = 0; i < movies.length; i++) {
-const rating = document.getElementById("movie");
-rating.textContent = `${movies[i].title} ${(movies[i].year)} has a rating of ${(movies[i].rating)}` 
-    
+];
+function movie(movieArray) {
+  movieOutput = document.getElementById("movie");
+  let output = "";
+
+  for (let i = 0; i < movieArray.length; i++) {
+    let FavMovie = movieArray[i];
+    output += `${FavMovie.title} (${FavMovie.year}) has a rating of ${FavMovie.rating}/10.<br>`;
   }
 
+  movieOutput.innerHTML = output;
 }
-movie()
 
-
+movie(movies);
 
 // const cfpData = [];
 
@@ -65,7 +66,7 @@ movie()
 // }
 
 // function displayOutObj(obj) {
- 
+
 //   console.log(obj);
 //   const output = document.getElementById("output");
 //   const newH2 = document.createElement("h2");
@@ -131,6 +132,3 @@ movie()
 // start(5, "large");
 
 // displayOutput();
-
-
-
