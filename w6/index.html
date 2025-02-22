@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 private</title>
+    <script defer src="main.js"></script>
+
+    <style>
+        html {
+            font-size: 22px;
+        }
+        input:in-range {
+            background-color: lightgreen;   
+        }
+        input:out-of-range {
+            background-color: lightcoral;    
+        }
+
+     
+
+        #output {
+            border-bottom: solid 5px red;
+            padding: 20px;
+
+        }
+
+    
+
+        .carbon {
+            border-bottom: solid 2px red;
+            padding: 5px;
+            width: 30%;
+        }
+
+        body {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="carbon">Carbon Footprint</h1>
+
+    <form id="form">
+        <fieldset>
+            <legend>Calculating Your Carbon Footprint Points</legend>
+
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+
+            <div>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div>
+                <label for="housem">Count the members of your house:</label>
+                <input type="number" id="housem" name="housem" min="1" max="6" required>
+            </div>
+            <div>
+                <label for="houses">Consider the size of your house:</label>
+                <input type="text" id="houses" name="houses"  required >
+                <select name="houses" required>
+                <option value="" >---Please enter size of home---</option>
+                <option value="apt">Apartment</option>
+                <option value="large">Large</option>
+                <option value="medium">Meduim</option>
+                <option value="small">Small</option>
+            </select>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <div id="output"></div>
+
+</body>
+
+</html>
