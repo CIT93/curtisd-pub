@@ -4,52 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommendations</title>
-    <style>
-        html {
-            font-size: 28px;
-        }
+    <title>Week 6 private</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-        body {
-            background-color: #070624;
-            color: rgb(198, 200, 228);
-            font-family: sans-serif;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid rgb(198, 200, 228);
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #1a1938;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #12112a;
-        }
-
-        .recommendation {
-            border: 1px solid rgb(198, 200, 228);
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
-    <script defer src="main.js"></script>
+  
 </head>
 
 <body>
+    <h1 class="carbon">Carbon Footprint</h1>
+
+    <form id="form">
+        <fieldset>
+            <legend>Calculating Your Carbon Footprint Points</legend>
+
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+
+            <div>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div>
+                <label for="housem">Count the members of your house:</label>
+                <input type="number" id="housem" name="housem" min="1" max="6" required>
+            </div>
+            <div>
+                <label for="houses">Consider the size of your house:</label>
+                <input type="text" id="houses" name="houses"  required >
+                <select name="houses" required>
+                <option value="" >---Please enter size of home---</option>
+                <option value="apt">Apartment</option>
+                <option value="large">Large</option>
+                <option value="medium">Meduim</option>
+                <option value="small">Small</option>
+            </select>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
     <div id="output"></div>
-    <div id="recommendations"></div>
+    <div id="tab-data"></div>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>HouseHold</th>
+            <th>House Size</th>
+            <th>Carbon Footprint</th>
+            <th>Actioin</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Curt</td>
+            <td>3</td>
+            <td>Large</td>
+            <td>20</td>
+            <td>
+                <button>Edit</button>
+                <button>Del</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Curt</td>
+            <td>3</td>
+            <td>Large</td>
+            <td>20</td>
+            <td>
+                <button>Edit</button>
+                <button>Del</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+ 
+
 </body>
 
 </html>
