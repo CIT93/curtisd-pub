@@ -1,93 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 private</title>
-    <script type="module" src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module"src="main.js"></script>
+    <title>Week 7 Priv</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1 class="carbon">Carbon Footprint</h1>
-
     <form id="form">
         <fieldset>
-            <legend>Calculating Your Carbon Footprint Points</legend>
-
+            <legend>Calculating your Carbon Footprint </legend>
             <div>
-                <label for="firstname">First Name:</label>
-                <input type="text" id="firstname" name="firstname" required>
+                <label for="">First Name:</label>
+                <input type="text" name="firstname" required />
             </div>
-
             <div>
-                <label for="lastname">Last Name:</label>
-                <input type="text" id="lastname" name="lastname" required>
+                <label for="">Last Name:</label>
+                <input type="text" name="lastname" required />
             </div>
-
             <div>
-                <label for="housem">Count the members of your house:</label>
-                <input type="number" id="housem" name="housem" min="1" max="6" required>
-            </div>
-
-            <div>
-                <label for="houses">Consider the size of your house:</label>
-                <input type="text" id="houses" name="houses" required>
-                <select name="houses" required>
-                    <option value="">---Please enter size of home---</option>
-                    <option value="apt">Apartment</option>
-                    <option value="large">Large</option>
-                    <option value="medium">Medium</option>
-                    <option value="small">Small</option>
-                </select>
-            </div>
-
-            <button type="submit">Submit</button>
+                <legend>Calculating you household members and house size</legend>
+                <div>
+                    <label for="">Including yourself how many people live in your household?</label>
+                    <input type="number" name="housem" min="1" max="12" required />
+                </div>
+                <div>
+                    <label for="">What size house do you live in?</label>
+                    <select name="houses">
+                        <option value="">---Please Enter Size of Home---</option>
+                        <option value="Apt">Apartment</option>
+                        <option value="Small">Small Home</option>
+                        <option value="Medium">Medium Home</option>
+                        <option value="Large">Large Home</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
         </fieldset>
-    </form>
-    <div id="output"></div>
-    <div id="tab-data">
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>HouseHold</th>
-                    <th>House Size</th>
-                    <th>Carbon Footprint</th>
-                    <th>Actioin</th>
-        
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Curt</td>
-                    <td>3</td>
-                    <td>Large</td>
-                    <td>20</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Del</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Curt</td>
-                    <td>3</td>
-                    <td>Large</td>
-                    <td>20</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Del</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
-
-
- 
-
+        <div id="output"></div>
+        <div id="tab-data"></div>
 </body>
 
 </html>

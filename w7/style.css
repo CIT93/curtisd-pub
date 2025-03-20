@@ -1,37 +1,20 @@
-
 html {
-    font-size: 22px;
+    font-size: 22px
 }
-input:in-range {
-    background-color: lightgreen;   
-}
-input:out-of-range {
-    background-color: lightcoral;    
-}
-
-
-
-#output {
-    border-bottom: solid 5px red;
-    padding: 20px;
-
-}
-
-
-
-.carbon {
-    border-bottom: solid 2px red;
-    padding: 5px;
-    width: 30%;
-}
-
 body {
     background-color: #333;
-    color: white;
+    color: whitesmoke;
 }
-
-
-
+input:in-range {
+    background-color: lightgreen;
+}
+input:out-of-range {
+    background-color: lightcoral;
+}
+table, th, td {
+    border: 1px solid;
+    padding: 5px;
+}
 tbody tr:nth-child(odd) {
-    background-color: blue !important; 
+    background-color: rgb(50, 21, 78);
 }

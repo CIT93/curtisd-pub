@@ -1,50 +1,35 @@
-// cfp.js
 function determineHouseSizePts(size) {
-    let houseSizePoints = 0;
-    if (size === "large") {
-      houseSizePoints = 10;
-    } else if (size === "medium") {
-      houseSizePoints = 7;
-    } else if (size === "small") {
-      houseSizePoints = 4;
-    } else if (size === "apt") {
-      houseSizePoints = 2;
-    }
-    return houseSizePoints;
+  let houseSizePoints = 0;
+  if (size === "Large") {
+    houseSizePoints = 10;
+  } else if (size === "Medium") {
+    houseSizePoints = 7;
+  } else if (size === "Small") {
+    houseSizePoints = 4;
+  } else if (size === "Apt") {
+    houseSizePoints = 2;
   }
-  
-  function determineHouseHoldPts(numberInHousehold) {
-    let houseHoldPoints = 0;
-    if (numberInHousehold === 1) {
-      houseHoldPoints = 14;
-    } else if (numberInHousehold === 2) {
-      houseHoldPoints = 12;
-    } else if (numberInHousehold === 3) {
-      houseHoldPoints = 10;
-    } else if (numberInHousehold === 4) {
-      houseHoldPoints = 8;
-    } else if (numberInHousehold === 5) {
-      houseHoldPoints = 6;
-    } else if (numberInHousehold === 6) {
-      houseHoldPoints = 4;
-    } else if (numberInHousehold > 6) {
-      houseHoldPoints = 2;
-    }
-    return houseHoldPoints;
+  return houseSizePoints;
+}
+
+function determineHouseHoldPts(numberInHousehold) {
+  let houseHoldPoints = 0;
+  if (numberInHousehold === 1) {
+    houseHoldPoints = 14;
+  } else if (numberInHousehold === 2) {
+    houseHoldPoints = 12;
+  } else if (numberInHousehold === 3) {
+    houseHoldPoints = 10;
+  } else if (numberInHousehold === 4) {
+    houseHoldPoints = 8;
+  } else if (numberInHousehold === 5) {
+    houseHoldPoints = 6;
+  } else if (numberInHousehold === 6) {
+    houseHoldPoints = 4;
+  } else if (numberInHousehold > 6) {
+    houseHoldPoints = 2;
   }
-  
-  function start(houseHoldMembers, houseSize) {
-    const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
-    const houseSizePts = determineHouseSizePts(houseSize);
-    const total = houseHoldPTS + houseSizePts;
-    return {
-      yourMember: houseHoldMembers,
-      yourHouse: houseSize,
-      yourMemPts: houseHoldPTS,
-      yourSizePts: houseSizePts,
-      tot: total,
-    };
-  }
-  
-  export { determineHouseSizePts, determineHouseHoldPts, start };
-  
+  return houseHoldPoints;
+}
+
+export { determineHouseHoldPts, determineHouseSizePts };
