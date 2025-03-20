@@ -9,10 +9,9 @@ const cfpData = [];
 FORM.addEventListener("submit", function (e) {
   e.preventDefault();
   const firstName = FORM.firstname.value;
-  const lastName = FORM.lastname.value;
   const houseHoldMembers = parseInt(FORM.housem.value);
   const houseSize = FORM.houses.value;
-  
+
   // Use the start function to calculate footprint
   const data = start(houseHoldMembers, houseSize);
 

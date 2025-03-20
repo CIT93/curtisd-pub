@@ -24,6 +24,9 @@ function renderTbl(data) {
   const table = TBL.querySelector("table");
   const tbody = table.querySelector("tbody") || document.createElement("tbody");
 
+  // Clear the tbody before appending new data to prevent duplication
+  tbody.innerHTML = "";
+
   data.forEach(function (obj) {
     const tr = document.createElement("tr");
 
