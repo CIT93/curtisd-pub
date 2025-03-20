@@ -2,7 +2,7 @@
 const TBL = document.getElementById("tab-data");
 
 function renderTblHeading() {
-  // Check if the table already exists, if so, don't create it again
+
   if (TBL.querySelector("table")) return;
 
   const table = document.createElement("table");
