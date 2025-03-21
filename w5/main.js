@@ -1,33 +1,74 @@
+// const movies = [
+//   {
+//     title: "Friday",
+//     year: "1995",
+//     rating: 9.5,
+//   },
+//   {
+//     title: "Next Friday",
+//     year: "2000",
+//     rating: 8.5,
+//   },
+//   {
+//     title: "Friday After Next",
+//     year: "2002",
+//     rating: 7.5,
+//   },
+// ];
+// function movie(movieArray) {
+//   movieOutput = document.getElementById("movie");
+//   let output = "";
+
+//   for (let i = 0; i < movieArray.length; i++) {
+//     let FavMovie = movieArray[i];
+//     output += `${FavMovie.title} (${FavMovie.year}) has a rating of ${FavMovie.rating}/10.<br>`;
+//   }
+
+//   movieOutput.innerHTML = output;
+// }
+
+// movie(movies);
+
 const movies = [
   {
     title: "Friday",
-    year: "1995",
+    year: 1995,  // Updated to use integers as required
     rating: 9.5,
+    watched: 2,  // Example value added for 'watched'
   },
   {
     title: "Next Friday",
-    year: "2000",
+    year: 2000,
     rating: 8.5,
+    watched: 4,  // Example value added for 'watched'
   },
   {
     title: "Friday After Next",
-    year: "2002",
+    year: 2002,
     rating: 7.5,
+    watched: 3,  // Example value added for 'watched'
   },
 ];
-function movie(movieArray) {
-  movieOutput = document.getElementById("movie");
-  let output = "";
 
-  for (let i = 0; i < movieArray.length; i++) {
-    let FavMovie = movieArray[i];
-    output += `${FavMovie.title} (${FavMovie.year}) has a rating of ${FavMovie.rating}/10.<br>`;
-  }
+function renderMovieTable(movieArray) {
+  const movieOutput = document.getElementById("movie");
+  let output = `<h2>Other Movies Similar</h2>`;
+
+  movieArray.forEach(movie => {
+    output += `
+      <div class="movie-container">
+        <div class="movie-item">${movie.title}</div>
+        <div class="movie-item">${movie.year}</div>
+        <div class="movie-item">${movie.rating}</div>
+        <div class="movie-item">${movie.watched}</div>
+      </div>
+    `;
+  });
 
   movieOutput.innerHTML = output;
 }
 
-movie(movies);
+renderMovieTable(movies);
 
 // const cfpData = [];
 
