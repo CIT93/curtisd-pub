@@ -1,3 +1,4 @@
+//main.js
 import { renderTbl } from "./render.js";
 import { determineHouseHoldPts, determineHouseSizePts } from "./cfp.js";
 
@@ -28,8 +29,6 @@ FORM.addEventListener(`submit`, function (e) {
   const houseSize = FORM.houses.value;
   start(firstName, lastName, houseHoldMembers, houseSize);
   OUTPUT.innerHTML = ""
-
-
-  renderTbl(cfpData);
+  renderTbl(cfpData, FORM); // Pass the FORM element to renderTbl
   FORM.reset();
 });
