@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module"src="main.js"></script>
-    <title>Week 7 Priv</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon-32x32heart.png">
+    <script type="module" src="main.js"></script>
+    <title>week 7</title>
 </head>
 <body>
+    <h1></h1>
     <form id="form">
         <fieldset>
-            <legend>Calculating your Carbon Footprint </legend>
+            <legend>calculating carbon footprint points</legend>
             <div>
-                <label for="">First Name:</label>
-                <input type="text" name="firstname" required />
+                <label for="">first name:</label>
+                <input type="text" name="firstname" required>
             </div>
             <div>
-                <label for="">Last Name:</label>
-                <input type="text" name="lastname" required />
+                <label for="">last name:</label>
+                <input type="text" name="lastname" required>
             </div>
             <div>
-                <legend>Calculating you household members and house size</legend>
-                <div>
-                    <label for="">Including yourself how many people live in your household?</label>
-                    <input type="number" name="housem" min="1" max="12" required />
-                </div>
-                <div>
-                    <label for="">What size house do you live in?</label>
-                    <select name="houses">
-                        <option value="">---Please Enter Size of Home---</option>
-                        <option value="Apt">Apartment</option>
-                        <option value="Small">Small Home</option>
-                        <option value="Medium">Medium Home</option>
-                        <option value="Large">Large Home</option>
-                    </select>
-                </div>
-                <button type="submit">Submit</button>
+                <label for="">count the number of household members:</label>
+                <input type="number" name="housemembers" min="1" max="10" required>
+            </div>
+            <div>
+                <label for="">determine the house size:</label>
+                <select name="housesize" required>
+                    <option value="">choose an option</option>
+                    <option value="apartment">apartment</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+                <!-- i did not have to change anything here because i already made it a select before this -->
+            </div>
+            <button type="submit">submit</button>
         </fieldset>
+    </form>
 
-        <div id="output"></div>
-        <div id="tab-data"></div>
+    <p id="output"></p>
+
+    <div id="tab-data"></div>
+
 </body>
-
 </html>
