@@ -1,0 +1,43 @@
+body {
+    background-color: lightgrey;
+    color: #000;
+    font: italic bold 1.25rem monospace;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    width: 75%;
+
+    border: dashed red 2px;
+}
+
+input:in-range {
+    background-color: greenyellow;
+}
+
+input:out-of-range {
+    background-color: darksalmon;
+}
+
+table, td {
+    border: 2px solid red;
+    margin: auto;
+    padding: .25rem;
+}
+
+th {
+    border: 2px dashed blue;
+    padding: .5rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: blue;
+    /* color: #FAF0E6; */
+}
+
+button {
+    background-color: red;
+    padding: 5px;
+}

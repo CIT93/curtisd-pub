@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon-32x32heart.png">
+    <script type="module" src="main.js"></script>
+    <title>week 9</title>
+</head>
+<body>
+    <h1></h1>
+    <!-- <div id="errors"></div> -->
+    <form id="form" method="get">
+        <fieldset>
+            <legend>calculating carbon footprint points</legend>
+            <div>
+                <label for="firstname">first name:</label>
+                <input type="text" name="firstname" id="firstName">
+                <span id="firstNameError"></span>
+            </div>
+            <div>
+                <label for="">last name:</label>
+                <input type="text" name="lastname" id="lastName">
+                <span id="lastNameError"></span>
+            </div>
+            <div>
+                <label for="">count the number of household members:</label>
+                <input type="number" name="housemembers" min="1" max="10" required>
+            </div>
+            <div>
+                <label for="">determine the house size:</label>
+                <select name="housesize" required>
+                    <option value="">choose an option</option>
+                    <option value="apartment">apartment</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+            </div>
+            <button type="submit">submit</button>
+        </fieldset>
+    </form>
+
+    <div id="tab-data"></div>
+
+</body>
+</html>
